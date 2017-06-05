@@ -8,6 +8,11 @@ class Post extends Model
 {
     protected $fillable = ['user_id', 'category_id', 'title', 'body', 'status'];
 
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
+
     /**
      * Sebuah Post data dimiliki satu user
      * @return [type] [description]

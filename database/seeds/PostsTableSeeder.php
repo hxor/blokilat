@@ -18,7 +18,9 @@ class PostsTableSeeder extends Seeder
         		'category_id' => rand(1,3),
         		'title' => 'Title Post ' . rand(1,10),
         		'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-        		'status' => 1
+        		'status' => 1,
+                'created_at' => new DateTime,
+                'updated_at' => new DateTime
         	];
         }
 

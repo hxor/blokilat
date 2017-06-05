@@ -19,7 +19,7 @@
             </p>
             
             <p>
-                <span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM
+                <span class="glyphicon glyphicon-time"></span> {{ $post->created_at->format('l jS \\of F Y h:i:s A') }}
             </p>
             <hr>
             
