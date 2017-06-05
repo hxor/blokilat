@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'FrontController@index')->name('/');
+Route::get('/post/{id}', 'FrontController@getPost')->name('post');
+
+Route::get('/category/{id}', 'FrontController@getPostByCategory')->name('category');
 
 Auth::routes();
 
