@@ -15,7 +15,7 @@
             </h2>
 
             <p class="lead">
-                by <a href="{{ route('post.user', $post->user->id) }}"><b>{{ $post->user->name }}</b></a>
+                by <a href="{{ route('post.user', $post->user->id) }}">{{ $post->user->name }}</a>
             </p>
 
             <p>
@@ -23,7 +23,7 @@
             </p>
             <hr>
 
-            <img class="img-responsive" src="{{ asset('images/900x300.png') }}" alt="">
+            <img class="img-responsive" src='{{ asset("$post->image") }}' alt="">
             <hr>
 
             <p>{!! str_limit($post->body, 500) !!}</p>

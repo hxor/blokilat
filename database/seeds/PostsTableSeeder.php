@@ -30,7 +30,8 @@ class PostsTableSeeder extends Seeder
           'category_id' => rand(1,3),
           'title' => $title,
           'body' => $content,
-          'status' => 1
+          'status' => 1,
+          'image' => 'photos/1/featured_image/image-'.rand(1,4).'.jpg'
         ]);
       }
     }

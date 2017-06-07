@@ -10,7 +10,7 @@
 
         <!-- Author -->
         <p class="lead">
-            by <a href="{{ route('post.user', $post->user->id) }}"><b>{{ $post->user->name }}</b></a>
+            by <a href="{{ route('post.user', $post->user->id) }}">{{ $post->user->name }}</a>
         </p>
 
         <hr>
@@ -21,7 +21,7 @@
         <hr>
 
         <!-- Preview Image -->
-        <img class="img-responsive" src="{{ asset('images/900x300.png') }}" alt="">
+        <img class="img-responsive" src='{{ asset("$post->image") }}' alt="">
 
         <hr>
 
