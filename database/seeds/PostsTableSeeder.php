@@ -11,19 +11,27 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
-    	$post = [];
-        foreach (range(1, 10) as $index) {
-        	$post[] = [
-        		'user_id' => rand(1,2),
-        		'category_id' => rand(1,3),
-        		'title' => 'Title Post ' . rand(1,10),
-        		'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-        		'status' => 1,
-                'created_at' => new DateTime,
-                'updated_at' => new DateTime
-        	];
-        }
+      $category = [
+        ['category' => 'Uncategorized'],
+        ['category' => 'Trend'],
+        ['category' => 'Hot News']
+      ];
 
-        DB::table('posts')->insert($post);
+      DB::table('categories')->insert($category);
+
+      $faker = Faker\Factory::create();
+      $faker->addProvider(new BlogArticleFaker\FakerProvider($faker));
+
+      for ($i=0; $i < 50; $i++) {
+        $title = $faker->articleTitle;
+        $content = $faker->articleContent;
+        App\Post::create([
+          'user_id' => rand(1,2),
+          'category_id' => rand(1,3),
+          'title' => $title,
+          'body' => $content,
+          'status' => 1
+        ]);
+      }
     }
 }
