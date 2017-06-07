@@ -10,10 +10,16 @@
         <a class="navbar-brand" href="#">Blokilat</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li>
                 <a href="{{ route('/') }}">Home</a>
+            </li>
+            <li>
+                <a href="{{ route('/') }}">Contact</a>
+            </li>
+            <li>
+                <a href="{{ route('/') }}">About</a>
             </li>
         </ul>
     </div>

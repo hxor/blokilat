@@ -13,19 +13,19 @@
             <h2>
                 <a href="{{ route('post', $post->id) }}">{{ $post->title }}</a>
             </h2>
-            
+
             <p class="lead">
-                by <a href="#"><b>{{ $post->user->name }}</b></a>
+                by <a href="{{ route('post.user', $post->user->id) }}"><b>{{ $post->user->name }}</b></a>
             </p>
-            
+
             <p>
                 <span class="glyphicon glyphicon-time"></span> {{ $post->created_at->format('l jS \\of F Y h:i:s A') }}
             </p>
             <hr>
-            
-            <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+
+            <img class="img-responsive" src="{{ asset('images/900x300.png') }}" alt="">
             <hr>
-            
+
             <p>{!! str_limit($post->body, 500) !!}</p>
             <a class="btn btn-primary" href="{{ route('post', $post->id) }}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 

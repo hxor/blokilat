@@ -10,18 +10,18 @@
 
         <!-- Author -->
         <p class="lead">
-            by <a href="#"><b>{{ $post->user->name }}</b></a>
+            by <a href="{{ route('post.user', $post->user->id) }}"><b>{{ $post->user->name }}</b></a>
         </p>
 
         <hr>
 
         <!-- Date/Time -->
-        <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+        <p><span class="glyphicon glyphicon-time"></span> {{ $post->created_at->format('l jS \\of F Y h:i:s A') }}</p>
 
         <hr>
 
         <!-- Preview Image -->
-        <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+        <img class="img-responsive" src="{{ asset('images/900x300.png') }}" alt="">
 
         <hr>
 

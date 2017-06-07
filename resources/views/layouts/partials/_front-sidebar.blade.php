@@ -21,7 +21,7 @@
             <div class="col-lg-6">
                 <ul class="list-unstyled">
                     @foreach (App\Category::all() as $data)
-                        <li><a href="{{ route('category', $data->id) }}">{{ $data->category }}</a></li>
+                        <li><a href="{{ route('post.category', $data->id) }}">{{ $data->category }}</a></li>
                     @endforeach
                 </ul>
             </div>

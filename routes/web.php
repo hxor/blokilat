@@ -14,8 +14,13 @@
 Route::get('/', 'FrontController@index')->name('/');
 Route::get('/post/{id}', 'FrontController@getPost')->name('post');
 
-Route::get('/category/{id}', 'FrontController@getPostByCategory')->name('category');
+Route::get('/category/{id}', 'FrontController@getPostByCategory')->name('post.category');
+Route::get('/user/{id}/post', 'FrontController@getPostByUser')->name('post.user');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => 'auth'], function(){
+  Route::get('/admin', 'AdminController@index')->name('admin');
+});
