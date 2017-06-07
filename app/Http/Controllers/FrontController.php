@@ -10,7 +10,7 @@ use App\User;
 class FrontController extends Controller
 {
     public function index(){
-    	$posts = Post::paginate(3);
+    	$posts = Post::orderBy('id', 'desc')->paginate(3);
     	return view('pages.blog', compact('posts'));
     }
 

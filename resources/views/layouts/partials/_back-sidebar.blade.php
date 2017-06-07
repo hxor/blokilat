@@ -19,10 +19,10 @@
                 <a href="#"><i class="glyphicon glyphicon-pushpin"></i> Posts<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="../admin/table-posts.php">Posts</a>
+                        <a href="{{ route('post.index') }}">Posts</a>
                     </li>
                     <li>
-                        <a href="../admin/table-categories.php">Categories</a>
+                        <a href="{{ route('category.index') }}">Categories</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->

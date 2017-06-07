@@ -5,7 +5,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="{{ route('admin') }}">SB Admin v2.0</a>
+    <a class="navbar-brand" href="{{ route('admin') }}">Admin Panel</a>
+    <a class="navbar-brand" href="{{ route('/') }}">Site</a>
 </div>
 <!-- /.navbar-header -->
 
